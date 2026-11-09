@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalCampus - Contacto y postulación</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <script type="text/javascript">
+function validarFormulario() {
+
+    
+    var nombre = document.getElementById("nombre").value;
+    var correo = document.getElementById("correo").value;
+    var edad = document.getElementById("edad").value;
+    var destino = document.getElementById("destino").value;
+    var mensaje = document.getElementById("mensaje").value;
+
+   
+    if (nombre == "" || correo == "" || edad == "" || destino == "" || mensaje == "") {
+        alert("Error: Tenés que completar todos los campos.");
+        return false;
+    }
+
+   
+    if (!isNaN(nombre)) {
+        alert("Error: El nombre debe contener letras.");
+        return false;
+    }
+
+    if (correo.indexOf("@") == -1 || correo.indexOf(".") == -1) {
+        alert("Error: Ingresá un correo electrónico válido.");
+        return false;
+    }
+
+    
+    if (edad < 16 || edad > 99) {
+        alert("Error: La edad debe estar entre 16 y 99 años.");
+        return false;
+    }
+
+   
+    alert("¡Formulario completado correctamente! Gracias por postularte a GlobalCampus.");
+
+    return false;
+}
+</script>
+    <header>
+        <div class="contenedor encabezado">
+            <a class="logo" href="index.html">🌐 GlobalCampus</a>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="sobre-nosotros.html">Sobre Nosotros</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor seccion">
+        <h1 class="titulo-pagina">Contacto y postulación</h1>
+        <p class="introduccion">Completá el formulario para recibir información sobre los intercambios estudiantiles.</p>
+
+        <div class="contacto-columnas">
+            <section class="formulario-caja">
+                <h2>Datos del estudiante</h2>
+                <form action="#" method="post">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+                    <label for="edad">Edad</label>
+                    <input type="number" id="edad" name="edad" min="16" max="99" required>
+
+                    <label for="destino">País de interés</label>
+                    <select id="destino" name="destino" required>
+                        <option value="">Seleccioná un país</option>
+                        <option value="Mexico">México</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Alemania">Alemania</option>
+                        <option value="España">España</option>
+                    </select>
+
+                    <label for="mensaje">¿Por qué te interesa realizar un intercambio?</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+
+                    <button type="submit">Enviar postulación</button>
+                </form>
+            </section>
+
+            <aside class="info-caja">
+                <h2>¿Tenés dudas?</h2>
+                <p>Podés comunicarte con nuestro equipo para recibir orientación sobre los destinos y el proceso de postulación.</p>
+                <p><strong>Email:</strong> info@globalcampus.com</p>
+                <p><strong>Teléfono:</strong> +54 11 1234 5678</p>
+                <p><strong>Atención:</strong> Lunes a viernes, de 9 a 17 h.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 GlobalCampus - Intercambio Estudiantil</p>
+    </footer>
+</body>
+</html>
