@@ -1,10 +1,9 @@
-/* ESTILOS GENERALES */
 * {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+    
     font-family: Arial, Helvetica, sans-serif;
     color: #183653;
     background-color: #f4f8fc;
@@ -14,7 +13,7 @@ body {
 .contenedor {
     width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
+
 }
 
 
@@ -35,12 +34,11 @@ header {
     color: #0758a8;
     font-size: 23px;
     font-weight: bold;
-    text-decoration: none;
+   
 }
 
 nav a {
     color: #183653;
-    text-decoration: none;
     margin-left: 18px;
     font-size: 14px;
 }
@@ -55,14 +53,12 @@ nav a:hover {
     min-height: 390px;
     display: flex;
     align-items: center;
-    background: linear-gradient(90deg, rgba(8, 43, 78, 0.88), rgba(8, 43, 78, 0.25)),
-                url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=85") center/cover;
+   background-color: #123b60;
 }
 
 .portada-contenido {
     width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
     color: white;
 }
 
@@ -86,7 +82,7 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* SECCIONES Y TARJETAS */
+
 .seccion {
     padding-top: 38px;
     padding-bottom: 45px;
@@ -110,14 +106,15 @@ nav a:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 22px;
     margin-top: 25px;
+    
 }
 
 .tarjeta {
-    overflow: hidden;
     background-color: white;
     border: 1px solid #dce7f0;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(20, 60, 90, 0.08);
+    
 }
 
 .tarjeta img {
@@ -160,8 +157,6 @@ nav a:hover {
     background-color: #0871c9;
     color: white;
     font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .boton:hover, button:hover {
@@ -258,7 +253,7 @@ footer {
     }
 
     nav a {
-        display: inline-block;
+        
         margin: 5px;
     }
 
